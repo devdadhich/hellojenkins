@@ -1,0 +1,12 @@
+version: "3"
+networks:
+   nw01:
+      driver: bridge
+
+services:
+  app:
+    image: dadhichdev/myrepository:latest
+    ports:
+      - 8081:8080
+    networks:
+       - nw01
